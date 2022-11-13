@@ -4,7 +4,7 @@
  * @Author: Innary
  * @Date: 2022-11-11 12:26:10
  * @LastEditors: Innary
- * @LastEditTime: 2022-11-13 17:10:43
+ * @LastEditTime: 2022-11-13 17:32:37
 -->
 
 
@@ -31,7 +31,7 @@ to
 ## install
 1. clone repository
     ```
-    git clone https://github.com/Innary/testtransfor.git
+    git clone https://github.com/Innary/texttransfor.git
     ```
 2. Switch to the root directory of TextTransfor
 
