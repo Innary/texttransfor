@@ -4,36 +4,36 @@
  * @Author: Innary
  * @Date: 2022-11-11 12:26:10
  * @LastEditors: Innary
- * @LastEditTime: 2022-11-11 23:56:58
+ * @LastEditTime: 2022-11-13 17:10:43
 -->
 
 
 ## Summary
-This is a quick copy of PDF text and remove line breaks, while you can cut the copied content  to sentence by sentence.
+This is a quick text file transfom script.
 
 
-这是一个用来复制PDF并且可以按照句子切分段落的脚本。
+you can transfom
+`html,md,json,tex,md,ipynb,rst,csv,docx`
+to
+`html,md,json, tex,ipynb,rst,pptx,docx,txt`
+
+这是一个用来转换文本文件的脚本。
+目前支持从
+`html,md,json,tex,md,ipynb,rst,csv,docx`
+转换为
+`html,md,json, tex,ipynb,rst,pptx,docx,txt`
 
 
-**WARNING**
 
-
-This script can only work on windows , no support for linux for now.
-
-
-
-
-
-
-`PDFcopy lastest version 0.0.2`
+`TextTransfor lastest version 0.0.1`
 
 ## Setup
 ## install
 1. clone repository
     ```
-    git clone https://github.com/Innary/pdfcopy.git
+    git clone https://github.com/Innary/testtransfor.git
     ```
-2. Switch to the root directory of PDFcopy
+2. Switch to the root directory of TextTransfor
 
 
 
@@ -53,24 +53,34 @@ python setup.py develop --uninstall
 
 
 # Usage
-## Enter
 
-type： 
+You can enter the following commands： 
 
 ```
-pcp
+tt -s {source_file_path} -o {output_dir} -of {output_format}
 ```
-in cmd.exe, then you can use `ctrl + c` and `ctrl + v` to copy&paste content in PDF
+or
+```
+tt -s {source_file_dir} -o {output_dir} -of {output_format}
+```
+
+As an example:
+```
+tt -s README.md -o .\out -of docx
+```
+or
+
+```
+tt -s .\in -o .\out -of docx
+```
 ### Args
-You can also use:
 ```
-pcp -s
-```
-to split sentence.
+'--source_path', '-s':  the relative path of the file or the path of the folder where the file is located
 
-## Exit
-type：
+
+'--output_path', '-o':  Output folder path, required
+'--source_format', '-sf':  The format of the file, which is automatically recognized by default
+'--output_format', '-of':   Format of output file, required
+'--input_encoding', '-e':   The encoding format of the file,defult is utf-8
 ```
-ctrl + c
-```
-in cmd.exe
+
